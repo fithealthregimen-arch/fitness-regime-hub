@@ -463,6 +463,10 @@
             margin-top: auto !important;
         }
         
+        .mt-auto {
+            margin-top: auto !important;
+        }
+        
         .card-icon {
             font-size: 2.5rem !important;
             color: var(--secondary-color) !important;
@@ -840,6 +844,9 @@
         .d-block { display: block !important; }
         .d-flex { display: flex !important; }
         .d-grid { display: grid !important; }
+        .flex-column { flex-direction: column !important; }
+        .justify-content-center { justify-content: center !important; }
+        .me-3 { margin-right: 1rem !important; }
         
         .justify-center { justify-content: center !important; }
         .justify-between { justify-content: space-between !important; }
@@ -895,7 +902,7 @@
                 <ul class="nav-menu" id="navMenu">
                     <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+
                     <li class="nav-item"><a href="#calculators" class="nav-link">Calculators</a></li>
                     <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
@@ -920,7 +927,7 @@
             <h1>Transform Your Health Journey</h1>
             <p>Your ultimate destination for fitness guides, nutrition tips, workout plans, and wellness calculators. Start your transformation today!</p>
             <div class="hero-buttons">
-                <a href="#services" class="btn btn-primary">Get Started</a>
+                <a href="#calculators" class="btn btn-primary">Get Started</a>
                 <a href="#about" class="btn btn-secondary">Learn More</a>
             </div>
         </div>
@@ -964,41 +971,7 @@
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section class="section section-alt" id="services">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Services</h2>
-                    <p>Comprehensive fitness and health solutions for every goal</p>
-                </div>
-                
-                <div class="grid grid-2">
-                    <div class="card">
-                        <h3>Workout Plans</h3>
-                        <p>Customized workout routines designed for your fitness level and goals. From beginner-friendly exercises to advanced training programs.</p>
-                        <a href="#" class="btn btn-primary mt-3">View Plans</a>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Nutrition Guides</h3>
-                        <p>Expert nutrition advice, meal plans, and dietary recommendations to fuel your fitness journey and optimize your health.</p>
-                        <a href="#" class="btn btn-primary mt-3">Learn More</a>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Wellness Coaching</h3>
-                        <p>Holistic approach to health including stress management, sleep optimization, and lifestyle coaching for complete wellness.</p>
-                        <a href="#" class="btn btn-primary mt-3">Get Coaching</a>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Fitness Assessments</h3>
-                        <p>Comprehensive fitness evaluations to establish baselines and track your progress throughout your fitness journey.</p>
-                        <a href="#" class="btn btn-primary mt-3">Book Assessment</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- Calculators Section -->
         <section class="section" id="calculators">
@@ -1048,7 +1021,7 @@
             </div>
         </section>
 
-        <!-- Content Example Section -->
+        <!-- Featured Content Section -->
         <section class="section section-alt" id="blog">
             <div class="container">
                 <div class="section-header">
@@ -1056,49 +1029,76 @@
                     <p>Latest fitness tips, workout guides, and health insights</p>
                 </div>
                 
-                <div class="grid grid-2">
-                    <div>
-                        <h3>Latest Articles</h3>
-                        <div class="card mb-4">
-                            <h4>10 Essential Exercises for Beginners</h4>
-                            <p>Start your fitness journey with these fundamental exercises that build strength and endurance safely and effectively.</p>
-                            <div class="mt-3">
-                                <a href="#" class="btn btn-primary">Read More</a>
-                            </div>
+                <!-- Latest Articles Grid -->
+                <div class="grid grid-3 mb-5">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-dumbbell"></i>
                         </div>
-                        
-                        <div class="card mb-4">
-                            <h4>Nutrition Myths Debunked</h4>
-                            <p>Separate fact from fiction with our expert analysis of common nutrition misconceptions that might be holding you back.</p>
-                            <div class="mt-3">
-                                <a href="#" class="btn btn-primary">Read More</a>
-                            </div>
+                        <h4>10 Essential Exercises for Beginners</h4>
+                        <p>Start your fitness journey with these fundamental exercises that build strength and endurance safely and effectively.</p>
+                        <div class="mt-auto">
+                            <a href="#" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                     
-                    <div>
-                        <h3>Video Workouts</h3>
-                        <div class="video-container mb-4">
-                            <!-- YouTube Video Embed -->
-                            <iframe src="https://www.youtube.com/embed/videoseries?list=UU_YOUR_CHANNEL_ID" 
-                                    title="FIT LIFE REGIME - Fitness Videos" 
-                                    frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowfullscreen>
-                            </iframe>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-apple-alt"></i>
                         </div>
-                        <div class="text-center mb-3">
-                            <a href="https://www.youtube.com/@FITLIFEREGIME" target="_blank" class="btn btn-secondary">
-                                <i class="fab fa-youtube"></i> Visit Our YouTube Channel
+                        <h4>Nutrition Myths Debunked</h4>
+                        <p>Separate fact from fiction with our expert analysis of common nutrition misconceptions that might be holding you back.</p>
+                        <div class="mt-auto">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Heart Health & Cardio</h4>
+                        <p>Discover the best cardiovascular exercises and tips to strengthen your heart and improve overall health.</p>
+                        <div class="mt-auto">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Featured Video Section -->
+                <div class="section-header">
+                    <h3>Featured Workout Video</h3>
+                    <p>Watch our latest fitness tutorial and training session</p>
+                </div>
+                
+                <div class="grid grid-2">
+                    <div class="video-container">
+                        <!-- Specific YouTube Video Embed -->
+                        <iframe src="https://www.youtube.com/embed/Kvj9YrGmYF0" 
+                                title="FIT LIFE REGIME - Featured Workout" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    
+                    <div class="d-flex flex-column justify-content-center">
+                        <h4>Transform Your Body with Our Expert Guidance</h4>
+                        <p>Join thousands of people who have transformed their lives with our proven fitness methods. This featured video showcases effective exercises that you can do at home or in the gym.</p>
+                        
+                        <div class="mb-3">
+                            <a href="https://www.youtube.com/@FITLIFEREGIME" target="_blank" class="btn btn-secondary me-3">
+                                <i class="fab fa-youtube"></i> Visit Our Channel
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=Kvj9YrGmYF0" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-play"></i> Watch Full Video
                             </a>
                         </div>
                         
-                        <div class="card">
-                            <h4>Weekly Workout Schedule</h4>
+                        <div class="card mt-3">
+                            <h5>Weekly Workout Schedule</h5>
                             <p>Follow our expertly designed weekly workout schedule that balances strength training, cardio, and recovery.</p>
-                            <div class="mt-3">
-                                <a href="#" class="btn btn-primary">View Schedule</a>
-                            </div>
+                            <a href="#" class="btn btn-primary">View Schedule</a>
                         </div>
                     </div>
                 </div>
@@ -1197,7 +1197,7 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <a href="#about">About Us</a>
-                    <a href="#services">Our Services</a>
+                    <a href="#calculators">Fitness Tools</a>
                     <a href="#calculators">Fitness Calculators</a>
                     <a href="#blog">Blog & Tips</a>
                     <a href="#contact">Contact Us</a>
