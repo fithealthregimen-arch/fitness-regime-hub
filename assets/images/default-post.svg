@@ -1,0 +1,20 @@
+*** Add File: assets/images/default-post.svg
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#006d5b"/>
+      <stop offset="1" stop-color="#004f4d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g fill="#ffffff" opacity="0.15">
+    <circle cx="200" cy="180" r="90"/>
+    <rect x="900" y="380" width="120" height="120" rx="24"/>
+    <rect x="340" y="420" width="80" height="80" transform="rotate(45 380 460)" rx="16"/>
+  </g>
+  <g fill="#ffffff" opacity="0.9">
+    <text x="60" y="110" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="52">Fitness Regime Hub</text>
+    <text x="60" y="170" font-family="Open Sans, Arial, sans-serif" font-size="26" opacity="0.9">Article</text>
+  </g>
+</svg>
+

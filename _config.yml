@@ -54,7 +54,7 @@ defaults:
     values:
       layout: "post"
       author: "Fitness Regime Hub Team"
-      image: /assets/images/default-post.jpg
+      image: /assets/images/default-post.svg
   - scope:
       path: ""
       type: "pages"

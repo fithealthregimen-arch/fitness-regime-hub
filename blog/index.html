@@ -25,19 +25,18 @@ permalink: /blog/
         
         <!-- Categories Filter -->
         <div class="categories-filter">
-            <button class="filter-btn active" data-category="all">All Posts</button>
-            {% assign category_names = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
-            {% for cat in category_names %}
-            {% unless cat == '' %}
-            <button class="filter-btn" data-category="{{ cat | strip | downcase }}">{{ cat | strip }}</button>
-            {% endunless %}
-            {% endfor %}
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="fitness">Fitness</button>
+            <button class="filter-btn" data-category="nutrition">Nutrition</button>
+            <button class="filter-btn" data-category="wellness">Wellness</button>
+            <button class="filter-btn" data-category="calculators">Calculators</button>
         </div>
         
         <!-- Blog Posts Grid -->
         <div class="blog-grid">
             {% for post in site.posts %}
-            <article class="blog-card" data-category="{{ post.categories | join: ' ' | downcase }}">
+            {% assign cats = post.categories | join: ' ' | downcase %}
+            <article class="blog-card" data-category="{{ cats }}">
                 {% if post.image %}
                 <div class="blog-card-image">
                     <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="img-fluid">
@@ -57,12 +56,10 @@ permalink: /blog/
                             <i class="fas fa-calendar"></i>
                             {{ post.date | date: "%B %d, %Y" }}
                         </span>
-                        {% if post.categories.size > 0 %}
                         <span class="blog-category">
                             <i class="fas fa-tag"></i>
-                            {{ post.categories.first }}
+                            {{ post.categories | join: ', ' }}
                         </span>
-                        {% endif %}
                     </div>
                     
                     <h2 class="blog-card-title">

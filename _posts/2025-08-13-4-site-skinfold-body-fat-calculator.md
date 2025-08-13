@@ -1,4 +1,3 @@
-*** Add File: _posts/4-site-skinfold-body-fat-calculator.md
 ---
 layout: post
 title: "4-Site Skinfold Body Fat Calculator (Durnin & Womersley)"

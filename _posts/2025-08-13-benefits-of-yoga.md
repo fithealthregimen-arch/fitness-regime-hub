@@ -4,7 +4,7 @@ title: "Benefits of Yoga for Overall Fitness and Wellness"
 description: "Discover how yoga can transform your fitness journey by improving flexibility, strength, mental health, and overall well-being."
 categories: [Wellness]
 date: 2024-01-15
-image: /assets/images/yoga-benefits.jpg
+image: /assets/images/default-post.svg
 tags: ["yoga", "flexibility", "mental health", "wellness", "stress relief"]
 ---
 

@@ -4,7 +4,7 @@ title: "10 Common Nutrition Myths Debunked by Science"
 description: "Separate fact from fiction with our expert analysis of the most persistent nutrition misconceptions that might be sabotaging your health goals."
 categories: [Nutrition]
 date: 2024-01-20
-image: /assets/images/nutrition-myths.jpg
+image: /assets/images/default-post.svg
 tags: ["nutrition", "myths", "science", "diet", "health facts"]
 ---
 

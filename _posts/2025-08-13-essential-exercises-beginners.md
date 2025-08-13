@@ -4,7 +4,7 @@ title: "10 Essential Exercises Every Beginner Should Master"
 description: "Build a strong foundation with these fundamental exercises that develop strength, improve mobility, and create the base for all future fitness progress."
 categories: [Fitness]
 date: 2024-01-25
-image: /assets/images/beginner-exercises.jpg
+image: /assets/images/default-post.svg
 tags: ["beginner", "exercises", "strength training", "fitness basics", "workout"]
 ---
 
