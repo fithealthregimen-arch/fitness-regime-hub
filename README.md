@@ -27,10 +27,10 @@ The script will ask you:
 - Featured image (optional)
 - Tags (optional)
 
-### Method 2: Using the Bash Script (Mac/Linux)
-```bash
-./scripts/newpost.sh "Your Post Title"
-```
+### Method 2: Create directly on GitHub (No scripts)
+1. Go to your repo → `_posts` → Add file → Create new file
+2. Name it `your-post-title.md`
+3. Paste the template below and fill it in
 
 ### Method 3: Manual Creation
 1. Create a new file in `_posts/` folder
