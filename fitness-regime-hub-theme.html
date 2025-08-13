@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Regime Hub - Your Ultimate Fitness & Health Destination</title>
+    <meta name="description" content="Transform your health journey with expert fitness guides, nutrition tips, workout plans, and wellness calculators. Your complete fitness regime hub.">
+    <meta name="keywords" content="fitness, health, workout, nutrition, wellness, exercise, fitness calculators, healthy lifestyle">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0 !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+        }
+        
+        :root {
+            --primary-color: #006d5b !important;
+            --primary-dark: #004f4d !important;
+            --secondary-color: #ff914d !important;
+            --accent-color: #90ee90 !important;
+            --background-light: #f8fffe !important;
+            --background-white: #ffffff !important;
+            --text-dark: #2c3e50 !important;
+            --text-light: #6c757d !important;
+            --border-color: #e9ecef !important;
+            --shadow: 0 3px 15px rgba(0, 109, 91, 0.08) !important;
+            --shadow-hover: 0 6px 25px rgba(0, 109, 91, 0.12) !important;
+            --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+            --gradient-primary: linear-gradient(135deg, #006d5b 0%, #004f4d 100%) !important;
+            --gradient-secondary: linear-gradient(135deg, #ff914d 0%, #e67e22 100%) !important;
+            --gradient-hero: linear-gradient(135deg, rgba(0, 109, 91, 0.85) 0%, rgba(0, 79, 77, 0.9) 100%) !important;
+            --border-radius: 12px !important;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+        
+        body {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+            line-height: 1.6 !important;
+            color: var(--text-dark) !important;
+            background-color: var(--background-white) !important;
+            font-size: 16px !important;
+            overflow-x: hidden !important;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 700 !important;
+            line-height: 1.3 !important;
+            margin-bottom: 1rem !important;
+            color: var(--text-dark) !important;
+        }
+        
+        h1 {
+            font-size: 3rem !important;
+            font-weight: 800 !important;
+            margin-bottom: 1.5rem !important;
+            letter-spacing: -0.5px !important;
+        }
+        
+        h2 {
+            font-size: 2.25rem !important;
+            margin-bottom: 1rem !important;
+            letter-spacing: -0.3px !important;
+        }
+        
+        h3 {
+            font-size: 1.5rem !important;
+            margin-bottom: 0.75rem !important;
+        }
+        
+        h4 {
+            font-size: 1.25rem !important;
+            margin-bottom: 0.75rem !important;
+        }
+        
+        p {
+            margin-bottom: 1rem !important;
+            color: var(--text-light) !important;
+            font-weight: 400 !important;
+            line-height: 1.6 !important;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding: 0 20px !important;
+        }
+        
+        /* Header and Navigation */
+        .header {
+            background: var(--background-white) !important;
+            box-shadow: var(--shadow) !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            z-index: 1000 !important;
+            transition: all 0.3s ease !important;
+            width: 100% !important;
+        }
+        
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px) !important;
+        }
+        
+        .nav-container {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            padding: 0.75rem 0 !important;
+            width: 100% !important;
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 1.5rem !important;
+            font-weight: 800 !important;
+            color: var(--primary-color) !important;
+            text-decoration: none !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.5rem !important;
+            white-space: nowrap !important;
+            flex-shrink: 0 !important;
+        }
+        
+        .logo i {
+            font-size: 1.75rem !important;
+            color: var(--secondary-color) !important;
+        }
+        
+        .nav-menu {
+            display: flex !important;
+            list-style: none !important;
+            gap: 1.5rem !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            align-items: center !important;
+        }
+        
+        .nav-item {
+            position: relative !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        .nav-link {
+            text-decoration: none !important;
+            color: var(--text-dark) !important;
+            font-weight: 500 !important;
+            padding: 0.5rem 0.75rem !important;
+            border-radius: 20px !important;
+            transition: all 0.3s ease !important;
+            position: relative !important;
+            overflow: hidden !important;
+            display: block !important;
+            white-space: nowrap !important;
+            font-size: 0.95rem !important;
+        }
+        
+        .nav-link::before {
+            content: '' !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: -100% !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: var(--gradient-primary) !important;
+            transition: left 0.3s ease !important;
+            z-index: -1 !important;
+        }
+        
+        .nav-link:hover::before {
+            left: 0 !important;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+            transform: translateY(-2px) !important;
+        }
+        
+        .mobile-menu-toggle {
+            display: none !important;
+            background: none !important;
+            border: none !important;
+            font-size: 1.5rem !important;
+            color: var(--primary-color) !important;
+            cursor: pointer !important;
+            padding: 0.5rem !important;
+            border-radius: 5px !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .mobile-menu-toggle:hover {
+            background: rgba(0, 109, 91, 0.1) !important;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative !important;
+            min-height: 90vh !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+            color: white !important;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%) !important;
+            background-attachment: fixed !important;
+            background-size: cover !important;
+            background-position: center !important;
+            overflow: hidden !important;
+        }
+        
+        .hero::before {
+            content: '' !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            background: var(--gradient-hero) !important;
+            z-index: 1 !important;
+        }
+        
+        .hero-content {
+            position: relative !important;
+            z-index: 2 !important;
+            max-width: 800px !important;
+            margin: 0 auto !important;
+            padding: 2rem !important;
+        }
+        
+        .hero h1 {
+            color: white !important;
+            font-size: 3.5rem !important;
+            margin-bottom: 1.5rem !important;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+            animation: fadeInUp 1s ease !important;
+            line-height: 1.2 !important;
+        }
+        
+        .hero p {
+            font-size: 1.3rem !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            margin-bottom: 2rem !important;
+            animation: fadeInUp 1s ease 0.2s both !important;
+        }
+        
+        .hero-buttons {
+            display: flex !important;
+            gap: 1rem !important;
+            justify-content: center !important;
+            flex-wrap: wrap !important;
+            animation: fadeInUp 1s ease 0.4s both !important;
+        }
+        
+        /* Decorative Elements */
+        .hero-shapes {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            z-index: 1 !important;
+            overflow: hidden !important;
+        }
+        
+        .shape {
+            position: absolute !important;
+            opacity: 0.1 !important;
+            animation: float 6s ease-in-out infinite !important;
+        }
+        
+        .shape-1 {
+            top: 20% !important;
+            left: 10% !important;
+            width: 100px !important;
+            height: 100px !important;
+            background: var(--accent-color) !important;
+            border-radius: 50% !important;
+            animation-delay: 0s !important;
+        }
+        
+        .shape-2 {
+            top: 60% !important;
+            right: 15% !important;
+            width: 80px !important;
+            height: 80px !important;
+            background: var(--secondary-color) !important;
+            border-radius: 20% !important;
+            animation-delay: 2s !important;
+        }
+        
+        .shape-3 {
+            bottom: 20% !important;
+            left: 20% !important;
+            width: 60px !important;
+            height: 60px !important;
+            background: var(--accent-color) !important;
+            transform: rotate(45deg) !important;
+            animation-delay: 4s !important;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block !important;
+            padding: 0.875rem 1.75rem !important;
+            text-decoration: none !important;
+            border-radius: 30px !important;
+            font-weight: 600 !important;
+            font-size: 1rem !important;
+            transition: all 0.3s ease !important;
+            border: none !important;
+            cursor: pointer !important;
+            position: relative !important;
+            overflow: hidden !important;
+            z-index: 1 !important;
+            text-align: center !important;
+            letter-spacing: 0.3px !important;
+        }
+        
+        .btn::before {
+            content: '' !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: -100% !important;
+            width: 100% !important;
+            height: 100% !important;
+            transition: left 0.3s ease !important;
+            z-index: -1 !important;
+        }
+        
+        .btn:hover::before {
+            left: 0 !important;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-primary) !important;
+            color: white !important;
+        }
+        
+        .btn-primary::before {
+            background: var(--gradient-secondary) !important;
+        }
+        
+        .btn-secondary {
+            background: transparent !important;
+            color: white !important;
+            border: 2px solid white !important;
+        }
+        
+        .btn-secondary::before {
+            background: white !important;
+        }
+        
+        .btn-secondary:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: var(--shadow-hover) !important;
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-top: 70px !important;
+        }
+        
+        .section {
+            padding: 4rem 0 !important;
+        }
+        
+        .section-alt {
+            background-color: var(--background-light) !important;
+        }
+        
+        .section-header {
+            text-align: center !important;
+            margin-bottom: 2.5rem !important;
+        }
+        
+        .section-header h2 {
+            color: var(--primary-color) !important;
+            margin-bottom: 0.75rem !important;
+            position: relative !important;
+        }
+        
+        .section-header h2::after {
+            content: '' !important;
+            position: absolute !important;
+            bottom: -10px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            width: 60px !important;
+            height: 3px !important;
+            background: var(--gradient-secondary) !important;
+            border-radius: 2px !important;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem !important;
+            max-width: 600px !important;
+            margin: 1.5rem auto 0 !important;
+            opacity: 0.9 !important;
+        }
+        
+        /* Grid Layouts */
+        .grid {
+            display: grid !important;
+            gap: 1.5rem !important;
+        }
+        
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+        }
+        
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+        }
+        
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+        }
+        
+        /* Cards */
+        .card {
+            background: var(--background-white) !important;
+            border-radius: var(--border-radius) !important;
+            padding: 1.75rem !important;
+            box-shadow: var(--shadow-card) !important;
+            transition: var(--transition) !important;
+            border: 1px solid transparent !important;
+            height: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            position: relative !important;
+        }
+        
+        .card:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: var(--shadow-hover) !important;
+            border-color: rgba(0, 109, 91, 0.1) !important;
+        }
+        
+        .card .btn {
+            margin-top: auto !important;
+        }
+        
+        .mt-auto {
+            margin-top: auto !important;
+        }
+        
+        .card-icon {
+            font-size: 2.5rem !important;
+            color: var(--secondary-color) !important;
+            margin-bottom: 1rem !important;
+            display: block !important;
+        }
+        
+        .card h3 {
+            color: var(--primary-color) !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            text-align: center !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+        
+        .feature-card::before {
+            content: '' !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: -100% !important;
+            width: 100% !important;
+            height: 3px !important;
+            background: var(--gradient-primary) !important;
+            transition: left 0.3s ease !important;
+            border-radius: 0 0 12px 12px !important;
+        }
+        
+        .feature-card:hover::before {
+            left: 0 !important;
+        }
+        
+        /* Image Styles */
+        .img-fluid {
+            max-width: 100% !important;
+            height: auto !important;
+            border-radius: var(--border-radius) !important;
+        }
+        
+        .img-rounded {
+            border-radius: 50% !important;
+        }
+        
+        /* Loading Animation */
+        .loading-shimmer {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%) !important;
+            background-size: 200% 100% !important;
+            animation: shimmer 1.5s infinite !important;
+        }
+        
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0 !important;
+            }
+            100% {
+                background-position: 200% 0 !important;
+            }
+        }
+        
+        /* Video Container */
+        .video-container {
+            position: relative !important;
+            width: 100% !important;
+            height: 0 !important;
+            padding-bottom: 56.25% !important; /* 16:9 aspect ratio */
+            border-radius: var(--border-radius) !important;
+            overflow: hidden !important;
+            box-shadow: var(--shadow-card) !important;
+            background: var(--background-light) !important;
+        }
+        
+        .video-container iframe {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            border: none !important;
+        }
+        
+        /* Tables */
+        .table-container {
+            overflow-x: auto !important;
+            border-radius: var(--border-radius) !important;
+            box-shadow: var(--shadow-card) !important;
+            margin: 2rem 0 !important;
+            background: var(--background-white) !important;
+        }
+        
+        table {
+            width: 100% !important;
+            border-collapse: collapse !important;
+            background: var(--background-white) !important;
+        }
+        
+        th, td {
+            padding: 1rem !important;
+            text-align: left !important;
+            border-bottom: 1px solid var(--border-color) !important;
+        }
+        
+        th {
+            background: var(--gradient-primary) !important;
+            color: white !important;
+            font-weight: 600 !important;
+        }
+        
+        tr:hover {
+            background-color: var(--background-light) !important;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--gradient-primary) !important;
+            color: white !important;
+            padding: 2.5rem 0 1rem !important;
+            margin-top: 2rem !important;
+        }
+        
+        .footer-content {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+            gap: 1.5rem !important;
+            margin-bottom: 1.5rem !important;
+        }
+        
+        .footer-section h3 {
+            color: white !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            margin-bottom: 0.5rem !important;
+            display: block !important;
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-color) !important;
+        }
+        
+        .social-links {
+            display: flex !important;
+            gap: 1rem !important;
+            margin-top: 1rem !important;
+        }
+        
+        .social-link {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 40px !important;
+            height: 40px !important;
+            background: rgba(255, 255, 255, 0.1) !important;
+            border-radius: 50% !important;
+            color: white !important;
+            font-size: 1.2rem !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .social-link:hover {
+            background: var(--secondary-color) !important;
+            transform: translateY(-2px) !important;
+        }
+        
+        .footer-bottom {
+            text-align: center !important;
+            padding-top: 2rem !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0 !important;
+                transform: translateY(20px) !important;
+            }
+            to {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) !important;
+            }
+            50% {
+                transform: translateY(-15px) !important;
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1 !important;
+            }
+            50% {
+                opacity: 0.7 !important;
+            }
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth !important;
+        }
+        
+        /* Focus styles for accessibility */
+        .btn:focus,
+        .nav-link:focus,
+        .social-link:focus {
+            outline: 2px solid var(--secondary-color) !important;
+            outline-offset: 2px !important;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                gap: 1rem !important;
+            }
+            
+            .nav-link {
+                padding: 0.4rem 0.6rem !important;
+                font-size: 0.9rem !important;
+            }
+            
+            .logo {
+                font-size: 1.4rem !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none !important;
+                position: absolute !important;
+                top: 100% !important;
+                left: 0 !important;
+                right: 0 !important;
+                background: var(--background-white) !important;
+                flex-direction: column !important;
+                padding: 1rem !important;
+                box-shadow: var(--shadow) !important;
+                gap: 0.5rem !important;
+                border-radius: 0 0 10px 10px !important;
+            }
+            
+            .nav-menu.active {
+                display: flex !important;
+            }
+            
+            .nav-item {
+                width: 100% !important;
+            }
+            
+            .nav-link {
+                width: 100% !important;
+                text-align: center !important;
+                padding: 0.75rem !important;
+                border-radius: 10px !important;
+            }
+            
+            .mobile-menu-toggle {
+                display: block !important;
+            }
+            
+            .hero h1 {
+                font-size: 2.25rem !important;
+            }
+            
+            .hero p {
+                font-size: 1.1rem !important;
+            }
+            
+            .hero-buttons {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 0.75rem !important;
+            }
+            
+            h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            h2 {
+                font-size: 1.75rem !important;
+            }
+            
+            h3 {
+                font-size: 1.3rem !important;
+            }
+            
+            .section {
+                padding: 2.5rem 0 !important;
+            }
+            
+            .container {
+                padding: 0 15px !important;
+            }
+            
+            .logo {
+                font-size: 1.3rem !important;
+            }
+            
+            .logo i {
+                font-size: 1.5rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            .hero {
+                min-height: 80vh !important;
+            }
+            
+            .btn {
+                padding: 0.8rem 1.5rem !important;
+                font-size: 1rem !important;
+            }
+            
+            .card {
+                padding: 1.25rem !important;
+            }
+            
+            .grid {
+                gap: 1rem !important;
+            }
+            
+            .section-header {
+                margin-bottom: 2rem !important;
+            }
+        }
+        
+        /* Utility Classes */
+        .text-center {
+            text-align: center !important;
+        }
+        
+        .text-left {
+            text-align: left !important;
+        }
+        
+        .text-right {
+            text-align: right !important;
+        }
+        
+        .mb-0 { margin-bottom: 0 !important; }
+        .mb-1 { margin-bottom: 0.25rem !important; }
+        .mb-2 { margin-bottom: 0.5rem !important; }
+        .mb-3 { margin-bottom: 1rem !important; }
+        .mb-4 { margin-bottom: 1.5rem !important; }
+        .mb-5 { margin-bottom: 3rem !important; }
+        
+        .mt-0 { margin-top: 0 !important; }
+        .mt-1 { margin-top: 0.25rem !important; }
+        .mt-2 { margin-top: 0.5rem !important; }
+        .mt-3 { margin-top: 1rem !important; }
+        .mt-4 { margin-top: 1.5rem !important; }
+        .mt-5 { margin-top: 3rem !important; }
+        
+        .p-0 { padding: 0 !important; }
+        .p-1 { padding: 0.25rem !important; }
+        .p-2 { padding: 0.5rem !important; }
+        .p-3 { padding: 1rem !important; }
+        .p-4 { padding: 1.5rem !important; }
+        .p-5 { padding: 3rem !important; }
+        
+        .d-none { display: none !important; }
+        .d-block { display: block !important; }
+        .d-flex { display: flex !important; }
+        .d-grid { display: grid !important; }
+        .flex-column { flex-direction: column !important; }
+        .justify-content-center { justify-content: center !important; }
+        .me-3 { margin-right: 1rem !important; }
+        
+        .justify-center { justify-content: center !important; }
+        .justify-between { justify-content: space-between !important; }
+        .align-center { align-items: center !important; }
+        
+        .w-100 { width: 100% !important; }
+        .h-100 { height: 100% !important; }
+        
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed !important;
+            bottom: 25px !important;
+            right: 25px !important;
+            width: 45px !important;
+            height: 45px !important;
+            background: var(--gradient-primary) !important;
+            color: white !important;
+            border: none !important;
+            border-radius: 50% !important;
+            font-size: 1.1rem !important;
+            cursor: pointer !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            transition: var(--transition) !important;
+            z-index: 1000 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        
+        .scroll-top.visible {
+            opacity: 0.9 !important;
+            visibility: visible !important;
+        }
+        
+        .scroll-top:hover {
+            opacity: 1 !important;
+            transform: translateY(-2px) !important;
+            box-shadow: var(--shadow-hover) !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="#" class="logo">
+                    <i class="fas fa-dumbbell"></i>
+                    Fitness Regime Hub
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+
+                    <li class="nav-item"><a href="#calculators" class="nav-link">Calculators</a></li>
+                    <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <button class="mobile-menu-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1>Transform Your Health Journey</h1>
+            <p>Your ultimate destination for fitness guides, nutrition tips, workout plans, and wellness calculators. Start your transformation today!</p>
+            <div class="hero-buttons">
+                <a href="#calculators" class="btn btn-primary">Get Started</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose Fitness Regime Hub?</h2>
+                    <p>We provide comprehensive fitness and health solutions tailored to your unique journey</p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="card feature-card">
+                        <div class="card-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3>Expert Guidance</h3>
+                        <p>Get professional fitness and nutrition advice from certified experts with years of experience.</p>
+                    </div>
+                    
+                    <div class="card feature-card">
+                        <div class="card-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Smart Calculators</h3>
+                        <p>Use our advanced calculators for BMI, calorie needs, workout planning, and more.</p>
+                    </div>
+                    
+                    <div class="card feature-card">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Track Progress</h3>
+                        <p>Monitor your fitness journey with our comprehensive tracking tools and analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Calculators Section -->
+        <section class="section" id="calculators">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Fitness Calculators</h2>
+                    <p>Powerful tools to help you plan and track your fitness journey</p>
+                </div>
+                
+                <div class="grid grid-4">
+                    <div class="card text-center">
+                        <div class="card-icon">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                        <h4>BMI Calculator</h4>
+                        <p>Calculate your Body Mass Index and understand your health status.</p>
+                        <a href="#" class="btn btn-primary">Calculate</a>
+                    </div>
+                    
+                    <div class="card text-center">
+                        <div class="card-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h4>Calorie Calculator</h4>
+                        <p>Determine your daily caloric needs based on your goals and activity level.</p>
+                        <a href="#" class="btn btn-primary">Calculate</a>
+                    </div>
+                    
+                    <div class="card text-center">
+                        <div class="card-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h4>Heart Rate Zones</h4>
+                        <p>Find your optimal heart rate zones for different types of exercise.</p>
+                        <a href="#" class="btn btn-primary">Calculate</a>
+                    </div>
+                    
+                    <div class="card text-center">
+                        <div class="card-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <h4>Body Fat Calculator</h4>
+                        <p>Estimate your body fat percentage using various measurement methods.</p>
+                        <a href="#" class="btn btn-primary">Calculate</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Content Section -->
+        <section class="section section-alt" id="blog">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Content</h2>
+                    <p>Latest fitness tips, workout guides, and health insights</p>
+                </div>
+                
+                <!-- Latest Articles Grid -->
+                <div class="grid grid-3 mb-5">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h4>10 Essential Exercises for Beginners</h4>
+                        <p>Start your fitness journey with these fundamental exercises that build strength and endurance safely and effectively.</p>
+                        <div class="mt-auto">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <h4>Nutrition Myths Debunked</h4>
+                        <p>Separate fact from fiction with our expert analysis of common nutrition misconceptions that might be holding you back.</p>
+                        <div class="mt-auto">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Heart Health & Cardio</h4>
+                        <p>Discover the best cardiovascular exercises and tips to strengthen your heart and improve overall health.</p>
+                        <div class="mt-auto">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Featured Video Section -->
+                <div class="section-header">
+                    <h3>Featured Workout Video</h3>
+                    <p>Watch our latest fitness tutorial and training session</p>
+                </div>
+                
+                <div class="grid grid-2">
+                    <div class="video-container">
+                        <!-- Specific YouTube Video Embed -->
+                        <iframe src="https://www.youtube.com/embed/Kvj9YrGmYF0" 
+                                title="FIT LIFE REGIME - Featured Workout" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    
+                    <div class="d-flex flex-column justify-content-center">
+                        <h4>Transform Your Body with Our Expert Guidance</h4>
+                        <p>Join thousands of people who have transformed their lives with our proven fitness methods. This featured video showcases effective exercises that you can do at home or in the gym.</p>
+                        
+                        <div class="mb-3">
+                            <a href="https://www.youtube.com/@FITLIFEREGIME" target="_blank" class="btn btn-secondary me-3">
+                                <i class="fab fa-youtube"></i> Visit Our Channel
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=Kvj9YrGmYF0" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-play"></i> Watch Full Video
+                            </a>
+                        </div>
+                        
+                        <div class="card mt-3">
+                            <h5>Weekly Workout Schedule</h5>
+                            <p>Follow our expertly designed weekly workout schedule that balances strength training, cardio, and recovery.</p>
+                            <a href="#" class="btn btn-primary">View Schedule</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sample Table -->
+                <div class="mt-5">
+                    <h3 class="text-center mb-4">Sample Workout Schedule</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>Workout Type</th>
+                                    <th>Duration</th>
+                                    <th>Intensity</th>
+                                    <th>Focus Area</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td>Strength Training</td>
+                                    <td>45 minutes</td>
+                                    <td>High</td>
+                                    <td>Upper Body</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>Cardio</td>
+                                    <td>30 minutes</td>
+                                    <td>Moderate</td>
+                                    <td>Cardiovascular</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>Strength Training</td>
+                                    <td>45 minutes</td>
+                                    <td>High</td>
+                                    <td>Lower Body</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>Yoga/Flexibility</td>
+                                    <td>30 minutes</td>
+                                    <td>Low</td>
+                                    <td>Recovery</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>Full Body Strength</td>
+                                    <td>45 minutes</td>
+                                    <td>High</td>
+                                    <td>Full Body</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>HIIT</td>
+                                    <td>25 minutes</td>
+                                    <td>Very High</td>
+                                    <td>Fat Burning</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>Rest/Light Activity</td>
+                                    <td>30 minutes</td>
+                                    <td>Very Low</td>
+                                    <td>Recovery</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> info@fitnessregimehub.com</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Fitness Street, Health City, HC 12345</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#about">About Us</a>
+                    <a href="#calculators">Fitness Tools</a>
+                    <a href="#calculators">Fitness Calculators</a>
+                    <a href="#blog">Blog & Tips</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <a href="#">Workout Plans</a>
+                    <a href="#">Nutrition Guides</a>
+                    <a href="#">Fitness Articles</a>
+                    <a href="#">Video Workouts</a>
+                    <a href="#">Health Calculators</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest fitness tips and updates delivered to your inbox.</p>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                        <input type="email" placeholder="Your email" style="flex: 1; padding: 0.75rem; border: none; border-radius: 25px; background: rgba(255,255,255,0.1); color: white;">
+                        <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem;">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fitness Regime Hub. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    navMenu.classList.remove('active');
+                    mobileToggle.querySelector('i').classList.add('fa-bars');
+                    mobileToggle.querySelector('i').classList.remove('fa-times');
+                }
+            });
+        });
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Add loading animation to cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Newsletter subscription (placeholder functionality)
+        document.querySelector('button[style*="Subscribe"]').addEventListener('click', function() {
+            const email = this.previousElementSibling.value;
+            if (email) {
+                alert('Thank you for subscribing! You will receive our latest fitness tips and updates.');
+                this.previousElementSibling.value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+    </script>
+</body>
+</html>

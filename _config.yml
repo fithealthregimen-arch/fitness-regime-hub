@@ -36,16 +36,15 @@ collections:
     output: true
     permalink: /:title/
 
-# Pagination
-paginate: 6
-paginate_path: "/blog/page:num/"
+# Pagination (disabled for now to simplify blog index under GitHub Pages)
+# paginate: 6
+# paginate_path: "/blog/page:num/"
 
 # Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-paginate
 
 # SEO Tag Settings
 defaults:
@@ -82,14 +81,14 @@ include:
 navigation:
   - name: Home
     url: /
+  - name: About
+    url: /#about
+  - name: Calculators
+    url: /#calculators
   - name: Blog
     url: /blog/
-  - name: Calculators
-    url: /calculators/
-  - name: About
-    url: /about/
   - name: Contact
-    url: /contact/
+    url: /#contact
 
 # Categories for easy organization
 categories:

@@ -228,8 +228,6 @@ google_analytics: GA_MEASUREMENT_ID
 - Jekyll Documentation: https://jekyllrb.com/docs/
 - Markdown Guide: https://www.markdownguide.org/
 - GitHub Pages: https://pages.github.com/
-- Fit Health Regimen: https://fithealthregimen.com/category/health-fitness-tools/
-- Brainy Tools: https://brainytoolshub.com/
 
 ### Quick Tips:
 - Always test locally before pushing to main
