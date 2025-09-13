@@ -80,7 +80,7 @@ fitness-regime-hub/
 
 ### Available Categories:
 - Fitness
-- Nutrition  
+- [Nutrition](https://fithealthregimen.com/category/nutrition-diet/)  
 - Wellness
 - Workouts
 - Weight Loss
@@ -247,5 +247,6 @@ Your website is now ready for easy content management. Focus on creating great f
 5. Start publishing amazing fitness content!
 
 ---
+
 
 **Need help?** The post creation scripts guide you through everything, and this README covers all the basics. Happy writing! 💪
