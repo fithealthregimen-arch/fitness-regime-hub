@@ -82,7 +82,7 @@ fitness-regime-hub/
 - Fitness
 - [Nutrition](https://fithealthregimen.com/category/nutrition-diet/)  
 - Wellness
-- Workouts
+- [Workouts](https://fithealthregimen.com/category/workout-plan/)
 - Weight Loss
 - Muscle Building
 - Cardio
@@ -250,3 +250,4 @@ Your website is now ready for easy content management. Focus on creating great f
 
 
 **Need help?** The post creation scripts guide you through everything, and this README covers all the basics. Happy writing! 💪
+
